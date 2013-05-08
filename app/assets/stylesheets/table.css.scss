@@ -1,0 +1,24 @@
+table {
+  padding: 5px;  
+  border: 3px double black;  
+  border-collapse: collapse;  
+  font-size: 18px;
+}
+tr {
+  font-family: $verdana;
+  text-align: left;  
+  @include background(linear-gradient(lighten($main-color, 7%), darken($main-color, 20%)) left repeat);
+  padding: 5px;  
+  border: 2px solid black;  
+}
+td {
+  border: 1px solid black;  
+  padding: 5px;  
+}
+th {
+  border: 3px double black; 
+  @include rounded-corners(8px);
+  background: tint(red, 40%);
+  background: shade(blue, 60%);
+  padding: 5px;  
+}

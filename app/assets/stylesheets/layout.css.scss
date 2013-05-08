@@ -1,0 +1,109 @@
+$main-color: #03507b;
+
+@mixin rounded-corners($radius: 5px) {
+  @include border-top-radius($radius);
+  @include border-bottom-radius($radius);
+  @include border-left-radius($radius);
+  @include border-right-radius($radius);
+}
+
+h1{
+  font-size: 2em;
+  color: white;
+  text-align: center;
+  @include rounded-corners(5px);
+  @include background-image( radial-gradient( darken($main-color, 70%),lighten($main-color, 20%) ));
+  
+  padding: 10px;
+}
+
+.link_main{
+    
+    font-style: italic;
+    font-size: 20px;
+    padding: 5px;  
+    @include background(linear-gradient(lighten($main-color, 3%), darken($main-color, 10%)) left repeat);
+    @include rounded-corners(15px);
+    @include box-shadow(0 0 5px 3px hsla(0, 0%, 0%, 0.65));
+
+  }
+body {
+  @include background-image( radial-gradient(lighten($main-color, 5%), darken($main-color, 90%) ));
+  
+  color: white;
+  font-family: $verdana;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+
+
+
+
+
+.information {
+  font-family: $verdana;
+  text-align: left;  
+  @include box-shadow(0 0 5px 3px hsla(0, 0%, 0%, 0.65));
+  @include rounded-corners(5px);
+  @include box-sizing(border-box);
+  font-style: italic;
+  @include background(linear-gradient($main-color, darken($main-color, 10%)) left repeat);
+}
+
+fieldset {
+  border: 1px solid #0F5127;
+ 
+}
+#explanation {
+  width: 450px;
+  border: 2px solid #309153;
+  @include rounded-corners(5px);
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
+
+.legend{
+   color: white;
+}
+ 
+
+
+ 
+.history div { border: 1px dotted #0E4020; margin: 10px; padding: 10px;}
+.history adition { color: grey;}
+.history p {  max-width: 90em;}
+.field {
+   font-style: italic;
+   font-size: 20px;
+}
+
+
+
+p, ol, ul, td {
+ 
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+pre {
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  border-bottom: 3px  #172EA1 solid;
+  border-top: 3px  #172EA1 solid;
+  background:#C4CCF0; 
+  padding: 10px;
+  
+}
+
+
+
+
+ 

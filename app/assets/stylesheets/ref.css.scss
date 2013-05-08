@@ -1,0 +1,40 @@
+.submit
+{
+  color: white;
+  &:hover {
+    color: yellow;
+    }
+}
+a {
+  color: white;
+  &:hover {
+    color: lighten($main-color, 50%);
+    }
+} 
+.actions
+{
+  @include button(shiny, $main-color);
+  font-size: 16px;
+}
+.warning
+{
+  @include button(shiny, lighten(red, 20%));
+  font-size: 10px;
+
+}
+
+.link {
+  @include box-shadow(0 0 5px 3px hsla(0, 0%, 0%, 0.65));
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  border-bottom: 3px  #172EA1 solid;
+  border-top: 3px  #172EA1 solid;
+  @include background(linear-gradient(lighten($main-color, 7%), darken($main-color, 20%)) left repeat);
+  color: black;
+  padding: 0.4em 0.6em;
+  width: 25em;
+  margin-bottom: 0.3em;
+  font-size: 15px;
+}
+  
